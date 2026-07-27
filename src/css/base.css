@@ -1,0 +1,68 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --second-family: "Fredoka", sans-serif;
+  --third-family: "Fredoka One", sans-serif;
+  --font3: "Inter", sans-serif;
+
+  --bg-light: #faf7f2;
+  --bg-mint: #d5f5e0;
+  --surface-white: #fffdfa;
+
+  --btn-pink: #ff3b77;
+  --btn-pink-hover: #c71f52;
+  --btn-pink-pressed: #ff5784;
+  --btn-green: #a2e0b8;
+  --btn-green-hover: #5bc580;
+
+  --text-primary: #134e2e;
+  --text-stroke: #1a813f;
+
+  font-family: var(--font-family);
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #2d4a3e;
+  background-color: #fffdfa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 60px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.title {
+  font-family: var(--third-family);
+  font-size: 48px;
+  color: var(--text-primary);
+  text-shadow: 2px 4px 8px 0 rgba(19, 78, 46, 0.16);
+}
