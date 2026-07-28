@@ -13,14 +13,15 @@
   --btn-pink-pressed: #ff5784;
   --btn-green: #a2e0b8;
   --btn-green-hover: #a2ecc0;
+  --btn-green-shadow: #5bc580;
 
+  --text-white: #fff;
   --text-main: #2d4a3e;
   --text-primary: #134e2e;
   --text-stroke: #1a813f;
 
   font-family: var(--font-family);
   font-size: 24px;
-  line-height: 1.5;
   font-weight: 400;
 
   color: var(--text-main);
