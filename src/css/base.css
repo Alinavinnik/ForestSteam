@@ -49,7 +49,6 @@
 :root {
   --font-family: 'Poppins', sans-serif;
   --second-family: 'Fredoka', sans-serif;
-  --third-family: 'Fredoka One', sans-serif;
   --font3: 'Inter', sans-serif;
 
   --bg-light: #faf7f2;
@@ -110,7 +109,8 @@ main {
 }
 
 .title {
-  font-family: var(--third-family);
+  font-family: var(--second-family);
+  font-weight: 700;
   font-size: 48px;
   color: var(--text-primary);
   text-shadow: 2px 4px 8px 0 rgba(19, 78, 46, 0.16);
