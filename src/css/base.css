@@ -1,8 +1,8 @@
 :root {
-  --font-family: "Poppins", sans-serif;
-  --second-family: "Fredoka", sans-serif;
-  --third-family: "Fredoka One", sans-serif;
-  --font3: "Inter", sans-serif;
+  --font-family: 'Poppins', sans-serif;
+  --second-family: 'Fredoka', sans-serif;
+  --third-family: 'Fredoka One', sans-serif;
+  --font3: 'Inter', sans-serif;
 
   --bg-light: #faf7f2;
   --bg-mint: #d5f5e0;
@@ -14,6 +14,7 @@
   --btn-green: #a2e0b8;
   --btn-green-hover: #5bc580;
 
+  --text-main: #2d4a3e;
   --text-primary: #134e2e;
   --text-stroke: #1a813f;
 
@@ -22,8 +23,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #2d4a3e;
-  background-color: #fffdfa;
+  color: var(--text-main);
+  background-color: var(--bg-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
