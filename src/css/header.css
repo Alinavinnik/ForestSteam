@@ -13,7 +13,9 @@
 }
 .header-logo-link {
   color: var(--text-stroke);
-  font-family: var(--third-family);
+  font-family: var(--second-family);
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 1440px) {
@@ -26,15 +28,17 @@
   .header-nav {
     max-width: 1040px;
     width: 100%;
+    padding: 24px 0;
   }
   .header-nav-list {
     display: flex;
-    padding: 24px 0;
     justify-content: space-between;
     align-items: center;
     font-weight: 500;
   }
-
+  .header-nav-item:last-child {
+    padding: 24px 0;
+  }
   .header-nav-link {
     padding: 8px 16px;
     background-color: var(--btn-green);
