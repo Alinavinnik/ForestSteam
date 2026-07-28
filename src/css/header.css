@@ -13,6 +13,7 @@
 }
 .header-logo-link {
   color: var(--text-stroke);
+  font-family: var(--third-family);
 }
 
 @media screen and (min-width: 1440px) {
