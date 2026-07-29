@@ -2,6 +2,10 @@
   background-color: var(--surface-white);
   box-shadow: 4px 6px 12px 0 rgba(162, 224, 184, 0.24);
   border-bottom: 2px solid var(--btn-green);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 .header-wrap {
   display: flex;
@@ -9,6 +13,7 @@
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
+  width: 100%;
 }
 .header-nav-list {
   display: none;
