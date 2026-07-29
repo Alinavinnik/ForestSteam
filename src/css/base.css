@@ -114,7 +114,7 @@ main {
   font-weight: 700;
   font-size: 48px;
   color: var(--text-primary);
-  text-shadow: 2px 4px 8px 0 rgba(19, 78, 46, 0.16);
+  text-shadow: 2px 4px 8px rgba(19, 78, 46, 0.16);
   -webkit-text-stroke: 2px #1a813f;
   paint-order: stroke fill;
   margin-bottom: 48px;
