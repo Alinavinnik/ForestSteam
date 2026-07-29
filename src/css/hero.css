@@ -26,7 +26,8 @@
     375px 528px,
     375px 528px,
     contain;
-  width: 375px;
+  max-width: 375px;
+  width: 100%;
   min-height: 981px;
   margin: 0 auto;
 }
@@ -64,6 +65,7 @@
       100% 100%,
       cover;
     width: 100%;
+    max-width: 1440px;
     height: auto;
     min-height: 797px;
   }
