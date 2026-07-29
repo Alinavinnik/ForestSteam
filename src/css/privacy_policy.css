@@ -1,0 +1,119 @@
+.privacy-container {
+  padding-top: 24px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-bottom: 8px solid #c71f52;
+  border-right: 4px solid #c71f52;
+  border-radius: 100px;
+  padding-block: 16px;
+  padding-inline: 32px;
+  width: 200px;
+  height: 56px;
+  box-shadow: 4px 6px 12px 0 rgba(162, 224, 184, 0.24);
+  background-color: #ff3b77;
+  margin-bottom: 32px;
+}
+
+.back-img {
+  display: block;
+  transform: scaleX(-1);
+  width: 16px;
+  height: 24px;
+}
+
+.back-link-text {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+
+.privacy-title {
+  -webkit-text-stroke: 2px #1a813f;
+  paint-order: stroke fill;
+  margin-bottom: 48px;
+}
+
+.privacy-section {
+  width: 100%;
+  padding: 48px 0;
+}
+
+.privacy-subtitle {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--text-main);
+  margin-bottom: 32px;
+}
+.privacy-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-main);
+}
+.privacy-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 24px;
+}
+.privacy-item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-main);
+}
+.li-link {
+  color: var(--text-stroke);
+}
+.privacy-link {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--text-stroke);
+}
+
+@media screen and (min-width: 1440px) {
+  .privacy-container {
+    padding-top: 48px;
+  }
+  .back-link {
+    width: 324px;
+    height: 74px;
+  }
+  .back-img {
+    width: 26px;
+    height: 42px;
+  }
+  .back-link-text {
+    font-size: 24px;
+  }
+  .title {
+    font-size: 68px;
+  }
+  .privacy-section {
+    padding: 48px 170px;
+  }
+  .privacy-subtitle {
+    font-size: 32px;
+  }
+  .privacy-text {
+    font-size: 24px;
+  }
+  .privacy-list {
+    margin-left: 8px;
+  }
+  .privacy-item {
+    font-size: 24px;
+  }
+  .privacy-link {
+    font-size: 24px;
+  }
+}
