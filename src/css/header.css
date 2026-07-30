@@ -116,6 +116,7 @@
   border-radius: 100px;
   background-color: var(--btn-pink);
   font-family: var(--second-family);
+  color: var(--surface-white);
 }
 .header-download-btn {
   display: none;
