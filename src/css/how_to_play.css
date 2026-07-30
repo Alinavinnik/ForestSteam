@@ -34,5 +34,34 @@
   max-width: 253px;
   min-height: 456px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 24px;
+}
+
+@media screen and (min-width: 1440px) {
+  .how-to-play-item {
+    display: flex;
+    gap: 186px;
+    align-items: center;
+  }
+  .how-to-play-title {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+  .how-to-play-item-title {
+    font-size: 32px;
+    padding: 24px 0;
+    max-width: 494px;
+  }
+  .how-to-play-item-descr {
+    font-size: 24px;
+    border-bottom: 16px solid var(--btn-green);
+    border-right: 8px solid var(--btn-green);
+    max-width: 494px;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 79px;
+  }
 }
