@@ -1,0 +1,13 @@
+.about-item-title {
+  font-weight: 500;
+  font-family: var(--second-family);
+  border-bottom: 8px solid var(--btn-green-shadow);
+  border-left: 1px solid var(--btn-green-shadow);
+  border-right: 4px solid var(--btn-green-shadow);
+  border-top: 1px solid var(--btn-green-shadow);
+  border-radius: 24px;
+  padding: 16px 8px;
+  background-color: var(--btn-green);
+  margin: 0 auto 8px;
+  text-align: center;
+}
