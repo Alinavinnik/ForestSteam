@@ -1,8 +1,9 @@
 .hero {
   padding-bottom: 96px;
   background-image:
-    url(/img/mob/hero/chamomile_mob.webp), url(/img/mob/hero/funnel_mob.webp),
-    url(/img/mob/hero/heart_hero_mob.webp),
+    url('./img/mob/hero/chamomile_mob.webp'),
+    url('./img/mob/hero/funnel_mob.webp'),
+    url('./img/mob/hero/heart_hero_mob.webp'),
     linear-gradient(
       180deg,
       rgba(45, 74, 62, 0.2) 0%,
