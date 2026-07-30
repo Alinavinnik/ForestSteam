@@ -1,0 +1,95 @@
+.features {
+  background-color: var(--bg-mint);
+  max-width: 375px;
+  width: 100%;
+  height: 1496px;
+  margin: 0 auto;
+}
+.features-container {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.features-header-text {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-main);
+  padding: 8px 12px;
+  border: 1px solid rgba(26, 129, 63, 0.4);
+  border-radius: 24px;
+  margin-bottom: 8px;
+}
+.features-title {
+  margin-bottom: 24px;
+}
+.features-list {
+}
+.features-item {
+  border-bottom: 12px solid #a2e0b8;
+  border-left: 1px solid #a2e0b8;
+  border-right: 6px solid #a2e0b8;
+  border-top: 1px solid #a2e0b8;
+  border-radius: 24px;
+  padding-block: 16px 32px;
+  padding-inline: 16px;
+  width: 343px;
+  height: auto;
+  box-shadow: 4px 6px 12px 0 rgba(162, 224, 184, 0.24);
+  background-color: var(--surface-white);
+}
+.features-icon-book {
+  width: 56px;
+  height: 56px;
+  background-image: url('/img/mob/features/book_green_mob.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 24px;
+}
+.features-subtitle {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+.features-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+@media screen and (min-width: 1440px) {
+  .features {
+    max-width: 1440px;
+    height: 998px;
+  }
+  .features-header-text {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+  .features-title {
+    margin-bottom: 48px;
+  }
+  .features-list {
+  }
+  .features-item {
+    width: 324px;
+    height: 318px;
+  }
+  .features-icon-book {
+    background-image: url('/img/desc/features/book_green_desk.webp');
+    margin-bottom: 32px;
+  }
+  .features-icon-book:hover,
+  .features-icon-book:focus {
+    background-image: url('/img/desc/features/book_red_desk.webp');
+  }
+  .features-subtitle {
+    margin-bottom: 16px;
+  }
+  .features-text {
+    font-size: 24px;
+  }
+}
