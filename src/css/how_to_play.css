@@ -10,10 +10,14 @@
   border-right: 4px solid var(--btn-green-shadow);
   border-top: 1px solid var(--btn-green-shadow);
   border-radius: 24px;
-  padding: 16px 8px;
   background-color: var(--btn-green);
-  margin: 0 auto 8px;
+  margin: 0 auto 24px;
   text-align: center;
+  padding: 15px 0 8px;
+  font-size: 24px;
+  white-space: nowrap;
+  max-width: 343px;
+  width: 100%;
 }
 .how-to-play-item-descr {
   font-size: 16px;
@@ -36,21 +40,44 @@
   width: 100%;
   margin: 0 auto 24px;
 }
+.how-to-play-item-descr[data-hidden='true'] {
+  display: none;
+}
+.how-to-play-img[data-hidden='true'] {
+  display: none;
+}
+.how-to-play-item-descr[data-hidden='false'] {
+  display: block;
+}
+.how-to-play-img[data-hidden='false'] {
+  display: block;
+}
 
 @media screen and (min-width: 1440px) {
-  .how-to-play-item {
+  .how-to-play-container {
     display: flex;
-    gap: 186px;
+    gap: 168px;
     align-items: center;
+  }
+  .how-to-play-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
   }
   .how-to-play-title {
     font-size: 48px;
     margin-bottom: 48px;
   }
   .how-to-play-item-title {
+    border-bottom: 12px solid var(--btn-green-shadow);
+    border-right: 6px solid var(--btn-green-shadow);
     font-size: 32px;
-    padding: 24px 0;
+    padding: 24px;
+    padding: 23px 0 12px;
+    white-space: nowrap;
     max-width: 494px;
+    width: 494px;
   }
   .how-to-play-item-descr {
     font-size: 24px;
@@ -58,10 +85,15 @@
     border-right: 8px solid var(--btn-green);
     max-width: 494px;
     min-height: 240px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 79px;
+    margin: 0;
+
+    padding: 84px 79px;
+  }
+  .how-to-play-img {
+    max-width: 434px;
+    min-height: 779px;
+    width: 100%;
+    border: 16px solid var(--text-primary);
+    border-radius: 44px;
   }
 }
