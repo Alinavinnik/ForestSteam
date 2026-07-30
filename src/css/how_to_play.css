@@ -1,4 +1,8 @@
-.about-item-title {
+.how-to-play-title {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+.how-to-play-item-title {
   font-weight: 500;
   font-family: var(--second-family);
   border-bottom: 8px solid var(--btn-green-shadow);
@@ -10,4 +14,25 @@
   background-color: var(--btn-green);
   margin: 0 auto 8px;
   text-align: center;
+}
+.how-to-play-item-descr {
+  font-size: 16px;
+  border-bottom: 12px solid var(--btn-green);
+  border-left: 1px solid var(--btn-green);
+  border-right: 6px solid var(--btn-green);
+  border-top: 1px solid var(--btn-green);
+  border-radius: 24px;
+  padding: 32px 16px 40px;
+  background-color: var(--surface-white);
+  margin: 0 auto 16px;
+  text-align: center;
+}
+.how-to-play-img {
+  box-shadow: -8px 8px 12px 0 rgba(19, 78, 46, 0.12);
+  border: 8px solid var(--text-primary);
+  border-radius: 32px;
+  max-width: 253px;
+  min-height: 456px;
+  width: 100%;
+  margin: 0 auto;
 }
