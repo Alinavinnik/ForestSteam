@@ -42,7 +42,6 @@
   background-color: var(--surface-white);
   transition:
     border-color 0.3s ease,
-    width 0.3s ease,
     height 0.3s ease,
     box-shadow 0.3s ease,
     background-color 0.3s ease;
@@ -125,7 +124,7 @@
     justify-content: center;
   }
   .features-item {
-    width: 324px;
+    width: 336px;
   }
   .features-icon {
     margin-bottom: 32px;
@@ -139,7 +138,6 @@
     border-radius: 24px;
     padding-block: 16px 32px;
     padding-inline: 16px;
-    width: 336px;
     height: auto;
     box-shadow: 4px 8px 16px 0 rgba(199, 31, 82, 0.24);
     background-color: #fffdfa;
