@@ -1,9 +1,9 @@
 .hero {
   padding-bottom: 96px;
   background-image:
-    url('../img/mob/hero/chamomile_mob.webp'),
-    url('../img/mob/hero/funnel_mob.webp'),
-    url('../img/mob/hero/heart_hero_mob.webp'),
+    url('/img/mob/hero/chamomile_mob.webp'),
+    url('/img/mob/hero/funnel_mob.webp'),
+    url('/img/mob/hero/heart_hero_mob.webp'),
     linear-gradient(
       180deg,
       rgba(45, 74, 62, 0.2) 0%,
@@ -17,8 +17,8 @@
       #faf7f2 91.43%
     ),
     image-set(
-      url('../img/mob/hero/hero_mob.webp') 1x,
-      url('../img/mob/hero/hero_mob_2x.webp') 2x
+      url('/img/mob/hero/hero_mob.webp') 1x,
+      url('/img/mob/hero/hero_mob_2x.webp') 2x
     );
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position:
@@ -51,9 +51,9 @@
   .hero {
     padding-bottom: 0;
     background-image:
-      url('../img/desc/hero/chamomile_desc.webp'),
-      url('../img/desc/hero/funnel_desc.webp'),
-      url('../img/desc/hero/little_heart_desc.webp'),
+      url('/img/desc/hero/chamomile_desc.webp'),
+      url('/img/desc/hero/funnel_desc.webp'),
+      url('/img/desc/hero/little_heart_desc.webp'),
       linear-gradient(
         90deg,
         rgba(45, 74, 62, 0) 0%,
@@ -67,8 +67,8 @@
         rgba(250, 247, 242, 0) 60.62%
       ),
       image-set(
-        url('../img/desc/hero/hero_desc.webp') 1x,
-        url('../img/desc/hero/hero_desc_2x.webp') 2x
+        url('/img/desc/hero/hero_desc.webp') 1x,
+        url('/img/desc/hero/hero_desc_2x.webp') 2x
       );
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position:
