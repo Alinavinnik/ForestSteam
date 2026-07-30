@@ -1,9 +1,6 @@
 .hero {
   padding-bottom: 96px;
   background-image:
-    url('../img/mob/hero/chamomile_mob.webp'),
-    url('../img/mob/hero/funnel_mob.webp'),
-    url('../img/mob/hero/heart_hero_mob.webp'),
     linear-gradient(
       180deg,
       rgba(45, 74, 62, 0.2) 0%,
@@ -20,18 +17,12 @@
       url('../img/mob/hero/hero_mob.webp') 1x,
       url('../img/mob/hero/hero_mob_2x.webp') 2x
     );
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
-    right 100px top 104px,
-    left 30px top 210px,
-    right 22px top 290px,
     top center,
     top center,
     top center;
   background-size:
-    44px 47px,
-    47px 45px,
-    70px 62px,
     375px 528px,
     375px 528px,
     contain;
@@ -51,9 +42,6 @@
   .hero {
     padding-bottom: 0;
     background-image:
-      url('../img/desc/hero/chamomile_desc.webp'),
-      url('../img/desc/hero/funnel_desc.webp'),
-      url('../img/desc/hero/little_heart_desc.webp'),
       linear-gradient(
         90deg,
         rgba(45, 74, 62, 0) 0%,
@@ -70,18 +58,9 @@
         url('../img/desc/hero/hero_desc.webp') 1x,
         url('../img/desc/hero/hero_desc_2x.webp') 2x
       );
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position:
-      right 100px top 320px,
-      right 600px top 90px,
-      right 700px top 530px,
-      center,
-      center,
-      center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center, center;
     background-size:
-      102px 109px,
-      93px 88px,
-      70px 62px,
       100% 100%,
       100% 100%,
       cover;
@@ -219,23 +198,34 @@
     background-color: #ff6b35;
   }
 }
+
+/* Декоративні фонові іконки — кожна свій background-image, окремо від .hero */
 .hero-item {
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .hero-item-funnel {
   width: 48px;
+  height: 45px;
   top: 203px;
   left: 21px;
+  background-image: url('../img/mob/hero/funnel_mob.webp');
 }
 .hero-item-heart {
   width: 70px;
+  height: 62px;
   right: 45px;
   top: 290px;
+  background-image: url('../img/mob/hero/heart_hero_mob.webp');
 }
 .hero-item-flower {
   width: 44px;
+  height: 47px;
   right: 120px;
   top: 110px;
+  background-image: url('../img/mob/hero/chamomile_mob.webp');
 }
 
 @media screen and (min-width: 1440px) {
@@ -244,17 +234,20 @@
     height: 89px;
     top: -60px;
     left: 4px;
+    background-image: url('../img/desc/hero/funnel_desc.webp');
   }
   .hero-item-heart {
     width: 70px;
     height: 62px;
     right: 660px;
     top: 350px;
+    background-image: url('../img/desc/hero/little_heart_desc.webp');
   }
   .hero-item-flower {
     width: 102px;
     height: 109px;
     right: 90px;
     top: 130px;
+    background-image: url('../img/desc/hero/chamomile_desc.webp');
   }
 }
