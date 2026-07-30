@@ -1,5 +1,6 @@
 .privacy-container {
   padding-top: 24px;
+  padding-bottom: 48px;
 }
 
 .back-link {
@@ -31,6 +32,10 @@
   font-weight: 500;
   font-size: 16px;
   color: #fff;
+}
+
+.privacy-title {
+  margin-bottom: 48px;
 }
 
 .privacy-section {
@@ -82,6 +87,17 @@
     width: 324px;
     height: 74px;
   }
+
+  .back-link:hover,
+  .back-link:focus {
+    border-bottom: 8px solid #c84212;
+    border-left: 1px solid #c84212;
+    border-right: 4px solid #c84212;
+    border-top: 1px solid #c84212;
+    box-shadow: 4px 8px 16px 0 rgba(199, 31, 82, 0.24);
+    background: #ff6b35;
+  }
+
   .back-img {
     width: 26px;
     height: 42px;
