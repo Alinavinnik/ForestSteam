@@ -52,26 +52,18 @@
   .how-to-play-container {
     display: flex;
     flex-direction: column;
-  }
-
-  .how-to-play-list {
-    display: grid;
-    grid-template-columns: 494px 1fr;
-    column-gap: 168px;
-    row-gap: 16px;
-    align-items: center;
+    position: relative;
   }
 
   .how-to-play-item {
-    display: contents;
-  }
-
-  .text-wrap {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    align-self: start;
   }
 
   .how-to-play-item-title {
-    grid-column: 1;
     font-size: 32px;
     padding: 24px 0;
     max-width: 494px;
@@ -79,7 +71,6 @@
   }
 
   .how-to-play-item-descr {
-    grid-column: 1;
     font-size: 24px;
     border-bottom: 16px solid var(--btn-green);
     border-right: 8px solid var(--btn-green);
@@ -90,13 +81,6 @@
     align-items: center;
     text-align: center;
     padding: 0 79px;
-  }
-
-  .how-to-play-item picture {
-    grid-column: 2;
-    grid-row: 1 / 2 span;
-    justify-self: center;
-    align-self: center;
   }
 
   .how-to-play-title {
@@ -110,6 +94,9 @@
     max-width: 434px;
     min-height: 779px;
     width: 100%;
-    margin: 0 auto 24px;
+    margin: 0;
+    position: absolute;
+    top: 177px;
+    left: 728px;
   }
 }
