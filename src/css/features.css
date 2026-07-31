@@ -107,7 +107,6 @@
 @media screen and (min-width: 1440px) {
   .features {
     max-width: 1440px;
-    height: 998px;
   }
   .features-header-text {
     font-size: 16px;
