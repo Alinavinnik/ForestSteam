@@ -36,23 +36,50 @@
   width: 100%;
   margin: 0 auto 24px;
 }
-
+.how-to-play-item-descr[data-hidden='true'] {
+  display: none;
+}
+.how-to-play-item-descr[data-hidden='false'] {
+  display: block;
+}
+.how-to-play-img[data-hidden='true'] {
+  display: none;
+}
+.how-to-play-img[data-hidden='false'] {
+  display: block;
+}
 @media screen and (min-width: 1440px) {
-  .how-to-play-item {
+  .how-to-play-container {
     display: flex;
-    gap: 186px;
+    flex-direction: column;
+  }
+
+  .how-to-play-list {
+    display: grid;
+    grid-template-columns: 494px 1fr;
+    column-gap: 168px;
+    row-gap: 16px;
     align-items: center;
   }
-  .how-to-play-title {
-    font-size: 48px;
-    margin-bottom: 48px;
+
+  .how-to-play-item {
+    display: contents;
   }
+
+  .text-wrap {
+    display: contents;
+  }
+
   .how-to-play-item-title {
+    grid-column: 1;
     font-size: 32px;
     padding: 24px 0;
     max-width: 494px;
+    width: 494px;
   }
+
   .how-to-play-item-descr {
+    grid-column: 1;
     font-size: 24px;
     border-bottom: 16px solid var(--btn-green);
     border-right: 8px solid var(--btn-green);
@@ -63,5 +90,26 @@
     align-items: center;
     text-align: center;
     padding: 0 79px;
+  }
+
+  .how-to-play-item picture {
+    grid-column: 2;
+    grid-row: 1 / 2 span;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .how-to-play-title {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  .how-to-play-img {
+    border: 16px solid var(--text-primary);
+    border-radius: 44px;
+    max-width: 434px;
+    min-height: 779px;
+    width: 100%;
+    margin: 0 auto 24px;
   }
 }
