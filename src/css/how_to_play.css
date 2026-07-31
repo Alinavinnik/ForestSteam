@@ -4,13 +4,15 @@
 }
 .how-to-play-item-title {
   font-weight: 500;
+  font-size: 24px;
   font-family: var(--second-family);
   border-bottom: 8px solid var(--btn-green-shadow);
   border-left: 1px solid var(--btn-green-shadow);
   border-right: 4px solid var(--btn-green-shadow);
   border-top: 1px solid var(--btn-green-shadow);
   border-radius: 24px;
-  padding: 16px 8px;
+  padding-top: 15px;
+  padding-bottom: 8px;
   background-color: var(--btn-green);
   margin: 0 auto 8px;
   text-align: center;
@@ -53,19 +55,23 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   .how-to-play-item {
     display: flex;
     flex-direction: column;
     align-items: start;
+    justify-content: center;
     gap: 24px;
-    align-self: start;
   }
 
   .how-to-play-item-title {
     font-size: 32px;
-    padding: 24px 0;
+    padding: 23px 0 12px;
+    border-right: 6px solid var(--btn-green-shadow);
+    border-bottom: 12px solid var(--btn-green-shadow);
     max-width: 494px;
     width: 494px;
   }
@@ -74,13 +80,13 @@
     font-size: 24px;
     border-bottom: 16px solid var(--btn-green);
     border-right: 8px solid var(--btn-green);
+    padding: 84px 79px;
     max-width: 494px;
     min-height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 79px;
   }
 
   .how-to-play-title {
