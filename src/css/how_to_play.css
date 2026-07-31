@@ -14,8 +14,13 @@
   padding-top: 15px;
   padding-bottom: 8px;
   background-color: var(--btn-green);
-  margin: 0 auto 8px;
+  margin: 0 auto 24px;
   text-align: center;
+  padding: 15px 0 8px;
+  font-size: 24px;
+  white-space: nowrap;
+  max-width: 343px;
+  width: 100%;
 }
 .how-to-play-item-descr {
   font-size: 16px;
@@ -68,6 +73,8 @@
   }
 
   .how-to-play-item-title {
+    border-bottom: 12px solid var(--btn-green-shadow);
+    border-right: 6px solid var(--btn-green-shadow);
     font-size: 32px;
     padding: 23px 0 12px;
     border-right: 6px solid var(--btn-green-shadow);
