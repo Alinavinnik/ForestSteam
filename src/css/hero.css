@@ -1,5 +1,6 @@
 .hero {
   padding-bottom: 96px;
+  background-color: var(--bg-light);
   background-image:
     linear-gradient(
       180deg,
@@ -24,7 +25,7 @@
     top center;
   background-size:
     375px 528px,
-    375px 528px,
+    375px 100%,
     contain;
   max-width: 375px;
   width: 100%;
