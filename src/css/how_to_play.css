@@ -129,15 +129,33 @@
 
   .active-1[data-slide='1'][data-active-slide='1'] {
     display: block;
-    background-image:
-      url('../img/desc/how_to_play/heart_1_desk.webp'),
-      url('../img/desc/how_to_play/book_1_desk.webp');
-    background-size:
-      64px 57px,
-      87px 97px;
-    background-position:
-      577px 167px,
-      1162px 555px;
+  }
+
+  .active-1[data-slide='1'][data-active-slide='1']::before {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 57px;
+    left: 577px;
+    top: 167px;
+    background-image: url('../img/desc/how_to_play/heart_1_desk.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: heartbeat 1.2s ease-in-out infinite;
+  }
+
+  .active-1[data-slide='1'][data-active-slide='1']::after {
+    content: '';
+    position: absolute;
+    width: 87px;
+    height: 97px;
+    left: 1162px;
+    top: 555px;
+    background-image: url('../img/desc/how_to_play/book_1_desk.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: top left;
+    animation: swing 2.5s ease-in-out infinite;
   }
 
   .active-1[data-slide='2'][data-active-slide='2'] {
@@ -179,14 +197,31 @@
 
   .active-1[data-slide='5'][data-active-slide='5'] {
     display: block;
-    background-image:
-      url('../img/desc/how_to_play/big_heart_5_desk.webp'),
-      url('../img/desc/how_to_play/funnel_5_desk.webp');
-    background-size:
-      130px 112px,
-      120px 115px;
-    background-position:
-      1180px 745px,
-      530px 430px;
+  }
+
+  .active-1[data-slide='5'][data-active-slide='5']::before {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 112px;
+    left: 1180px;
+    top: 745px;
+    background-image: url('../img/desc/how_to_play/big_heart_5_desk.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: heartbeat 1.2s ease-in-out infinite;
+  }
+
+  .active-1[data-slide='5'][data-active-slide='5']::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 115px;
+    left: 530px;
+    top: 430px;
+    background-image: url('../img/desc/how_to_play/funnel_5_desk.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: pour 2.5s ease-in-out infinite;
   }
 }
