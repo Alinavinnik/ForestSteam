@@ -3,7 +3,7 @@ import modalWindow from '/js/modal';
 import './js/reviews';
 import './js/faq';
 import showGoogleBtn from './js/header.js';
-
+import './js/gallery-swiper.js';
 modalWindow();
 accordionHowToPlay();
 showGoogleBtn();
