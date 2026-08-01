@@ -162,10 +162,10 @@
   }
   .header-logo-link {
     font-size: 32px;
-    transition: background-color 0.3 ease-in-out;
+    transition: color 0.3 ease-in-out;
   }
   .header-logo-link:hover {
-    background-color: #c84212;
+    color: #c84212;
   }
   .header-nav {
     max-width: 1040px;
