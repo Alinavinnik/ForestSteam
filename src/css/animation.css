@@ -1,0 +1,81 @@
+.heart-animation {
+  animation: heartbeat 1.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+}
+.flower-animation {
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero-item-funnel {
+  animation: pour 2.5s ease-in-out infinite;
+  transform-origin: bottom left;
+}
+@keyframes pour {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  20% {
+    transform: rotate(-4deg) translateX(-2px);
+  }
+  40% {
+    transform: rotate(4deg) translateX(2px);
+  }
+  60% {
+    transform: rotate(-3deg) translateX(-1px);
+  }
+  80% {
+    transform: rotate(3deg) translateX(1px);
+  }
+}
+
+@keyframes bounce-clover {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

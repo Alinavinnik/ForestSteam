@@ -1,17 +1,18 @@
-@import url("./reset.css");
-@import url("./base.css");
-@import url("./container.css");
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
 
 /* Sections style */
-@import url("./header.css");
-@import url("./hero.css");
-@import url("./about_the_game.css");
-@import url("./how_to_play.css");
-@import url("./features.css");
-@import url("./faq.css");
-@import url("./gallery.css");
-@import url("./reviews.css");
-@import url("./contact.css");
-@import url("./footer.css");
-@import url("./privacy_policy.css");
-@import url("./terms_of_service.css");
+@import url('./animation.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./about_the_game.css');
+@import url('./how_to_play.css');
+@import url('./features.css');
+@import url('./faq.css');
+@import url('./gallery.css');
+@import url('./reviews.css');
+@import url('./contact.css');
+@import url('./footer.css');
+@import url('./privacy_policy.css');
+@import url('./terms_of_service.css');
