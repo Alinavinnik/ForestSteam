@@ -4,12 +4,15 @@
 }
 .how-to-play-item-title {
   font-weight: 500;
+  font-size: 24px;
   font-family: var(--second-family);
   border-bottom: 8px solid var(--btn-green-shadow);
   border-left: 1px solid var(--btn-green-shadow);
   border-right: 4px solid var(--btn-green-shadow);
   border-top: 1px solid var(--btn-green-shadow);
   border-radius: 24px;
+  padding-top: 15px;
+  padding-bottom: 8px;
   background-color: var(--btn-green);
   margin: 0 auto 24px;
   text-align: center;
@@ -18,6 +21,11 @@
   white-space: nowrap;
   max-width: 343px;
   width: 100%;
+  scroll-margin-top: 85px;
+}
+.text-wrap:has(.how-to-play-item-descr[data-hidden='false'])
+  .how-to-play-item-title {
+  margin-bottom: 8px;
 }
 .how-to-play-item-descr {
   font-size: 16px;
@@ -26,7 +34,7 @@
   border-right: 6px solid var(--btn-green);
   border-top: 1px solid var(--btn-green);
   border-radius: 24px;
-  padding: 32px 16px 40px;
+  padding: 32px 10px 28px 15px;
   background-color: var(--surface-white);
   margin: 0 auto 16px;
   text-align: center;
@@ -40,60 +48,145 @@
   width: 100%;
   margin: 0 auto 24px;
 }
+
 .how-to-play-item-descr[data-hidden='true'] {
-  display: none;
-}
-.how-to-play-img[data-hidden='true'] {
   display: none;
 }
 .how-to-play-item-descr[data-hidden='false'] {
   display: block;
 }
+.how-to-play-img[data-hidden='true'] {
+  display: none;
+}
 .how-to-play-img[data-hidden='false'] {
   display: block;
 }
-
 @media screen and (min-width: 1440px) {
   .how-to-play-container {
     display: flex;
-    gap: 168px;
-    align-items: center;
-  }
-  .how-to-play-list {
-    display: flex;
     flex-direction: column;
-    gap: 24px;
     align-items: start;
+    position: relative;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
-  .how-to-play-title {
-    font-size: 48px;
-    margin-bottom: 48px;
+
+  .how-to-play-item {
+    display: flex;
+    justify-content: start;
+    gap: 24px;
   }
+
   .how-to-play-item-title {
     border-bottom: 12px solid var(--btn-green-shadow);
     border-right: 6px solid var(--btn-green-shadow);
     font-size: 32px;
-    padding: 24px;
     padding: 23px 0 12px;
-    white-space: nowrap;
+    border-right: 6px solid var(--btn-green-shadow);
+    border-bottom: 12px solid var(--btn-green-shadow);
     max-width: 494px;
     width: 494px;
+    cursor: pointer;
   }
+
   .how-to-play-item-descr {
     font-size: 24px;
     border-bottom: 16px solid var(--btn-green);
     border-right: 8px solid var(--btn-green);
+    padding: 84px 63px;
     max-width: 494px;
     min-height: 240px;
-    margin: 0;
-
-    padding: 84px 79px;
+    text-align: center;
   }
+
+  .how-to-play-title {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
   .how-to-play-img {
+    border: 16px solid var(--text-primary);
+    border-radius: 44px;
     max-width: 434px;
     min-height: 779px;
     width: 100%;
-    border: 16px solid var(--text-primary);
-    border-radius: 44px;
+    margin: 0;
+    position: absolute;
+    top: 193px;
+    left: 728px;
+  }
+
+  .active-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    display: none;
+  }
+
+  .active-1[data-slide='1'][data-active-slide='1'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/heart_1_desk.webp'),
+      url('../img/desc/how_to_play/book_1_desk.webp');
+    background-size:
+      64px 57px,
+      87px 97px;
+    background-position:
+      577px 167px,
+      1162px 555px;
+  }
+
+  .active-1[data-slide='2'][data-active-slide='2'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/blast_2_desk.webp'),
+      url('../img/desc/how_to_play/propeller_2_desk.webp');
+    background-size:
+      110px 134px,
+      72px 66px;
+    background-position:
+      537px 752px,
+      1162px 172px;
+  }
+  .active-1[data-slide='3'][data-active-slide='3'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/blast_2_desk.webp'),
+      url('../img/desc/how_to_play/propeller_2_desk.webp');
+    background-size:
+      110px 134px,
+      72px 66px;
+    background-position:
+      1180px 128px,
+      580px 430px;
+  }
+  .active-1[data-slide='4'][data-active-slide='4'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/chamomile_4_desk.webp'),
+      url('../img/desc/how_to_play/clover_4_desk.webp');
+    background-size:
+      110px 112px,
+      115px 115px;
+    background-position:
+      550px 530px,
+      1140px 703px;
+  }
+
+  .active-1[data-slide='5'][data-active-slide='5'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/big_heart_5_desk.webp'),
+      url('../img/desc/how_to_play/funnel_5_desk.webp');
+    background-size:
+      130px 112px,
+      120px 115px;
+    background-position:
+      1180px 745px,
+      530px 430px;
   }
 }

@@ -1,51 +1,31 @@
 export default function () {
-  const triggers = document.querySelectorAll('[data-trigger]');
-  const descriptions = document.querySelectorAll('[data-descr]');
-  const images = document.querySelectorAll('[data-img]');
-  const items = document.querySelectorAll('[data-item]');
-  const imgContainer = document.querySelector('[data-img-container]');
-  const howToPlayContainer = document.querySelector(
-    '[data-how-to-play-container]'
-  );
+  const items = document.querySelectorAll('[data-slide]');
+  const decors = document.querySelectorAll('[data-active-slide]');
 
-  const mobileQuery = window.matchMedia('(max-width: 1439px)');
+  items.forEach(item => {
+    const title = item.querySelector('[data-slide-title]');
+    if (!title) return;
 
-  function moveImgContainer(activeIndex) {
-    if (mobileQuery.matches) {
-      const activeItem = document.querySelector(
-        `[data-item][data-index="${activeIndex}"]`
-      );
-      const activeDescr = activeItem.querySelector('[data-descr]');
-      activeDescr.insertAdjacentElement('afterend', imgContainer);
-    } else {
-      howToPlayContainer.appendChild(imgContainer);
-    }
-  }
+    title.addEventListener('click', () => {
+      const slideNumber = item.dataset.slide;
 
-  function setActive(index) {
-    descriptions.forEach(descr => {
-      descr.dataset.hidden =
-        descr.dataset.index === String(index) ? 'false' : 'true';
-    });
-    images.forEach(img => {
-      img.dataset.hidden =
-        img.dataset.index === String(index) ? 'false' : 'true';
-    });
-    moveImgContainer(index);
-  }
+      items.forEach(el => {
+        el.querySelectorAll('[data-hidden]').forEach(child => {
+          child.dataset.hidden = 'true';
+        });
+      });
 
-  triggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      setActive(Number(trigger.dataset.index));
+      item.querySelectorAll('[data-hidden]').forEach(child => {
+        child.dataset.hidden = 'false';
+      });
+
+      decors.forEach(decor => {
+        decor.dataset.activeSlide = slideNumber;
+      });
+
+      if (window.innerWidth < 1440) {
+        title.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
-
-  mobileQuery.addEventListener('change', () => {
-    const activeDescr = [...descriptions].find(
-      d => d.dataset.hidden === 'false'
-    );
-    moveImgContainer(Number(activeDescr.dataset.index));
-  });
-
-  setActive(0);
 }
