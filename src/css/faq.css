@@ -51,6 +51,10 @@
   box-shadow: 4px 6px 12px 0 rgba(162, 224, 184, 0.24);
   background: var(--surface-white);
 }
+.faq-item,
+.faq-item[open] {
+  background-clip: padding-box;
+}
 
 .faq-question {
   list-style: none;
