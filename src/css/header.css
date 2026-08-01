@@ -6,15 +6,13 @@
   top: 0;
   z-index: 1000;
   width: 100%;
+  padding: 16px 0;
 }
 .header-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
   width: 100%;
-  margin: 0 auto;
 }
 .header-nav-list {
   display: none;
@@ -155,10 +153,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .header {
+    padding: 24px 0;
+  }
   .header-wrap {
     justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 24px;
   }
   .header-logo-link {
     font-size: 32px;
@@ -174,6 +173,7 @@
     align-items: center;
     font-weight: 500;
   }
+
   .header-download-btn[data-visible='show'] {
     display: inline-flex;
     align-items: center;
