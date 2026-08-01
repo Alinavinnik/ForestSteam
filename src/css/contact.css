@@ -1,6 +1,7 @@
+.contact {
+  padding: 32px 0 48px;
+}
 .content-wrapper {
-  padding-top: 32px;
-  padding-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -49,8 +50,8 @@
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  .contact-container {
-    padding-bottom: 48px;
+  .contact {
+    padding: 0 0 48px;
   }
   .content-wrapper {
     background-image:

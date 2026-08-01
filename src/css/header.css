@@ -160,9 +160,6 @@
     align-items: center;
     font-weight: 500;
   }
-  .header-nav-item:last-child {
-    padding: 24px 0;
-  }
   .header-download-btn[data-visible='show'] {
     display: inline-flex;
     align-items: center;
