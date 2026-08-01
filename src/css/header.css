@@ -121,6 +121,7 @@
   background-color: var(--btn-pink);
   font-family: var(--second-family);
   color: var(--surface-white);
+  transition: all 0.3 ease-in-out;
 }
 .google-button:hover {
   border-bottom: 8px solid #c84212;
@@ -161,6 +162,10 @@
   }
   .header-logo-link {
     font-size: 32px;
+    transition: background-color 0.3 ease-in-out;
+  }
+  .header-logo-link:hover {
+    background-color: #c84212;
   }
   .header-nav {
     max-width: 1040px;

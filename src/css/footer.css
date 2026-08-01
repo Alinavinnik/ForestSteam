@@ -35,6 +35,10 @@
   }
   .footer__logo {
     margin-bottom: 0;
+    transition: background-color 0.3 ease-in-out;
+  }
+  .footer__logo:hover {
+    background-color: #c84212;
   }
   .footer__item {
     font-size: 24px;
