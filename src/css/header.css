@@ -104,6 +104,13 @@
   border-top: 1px solid var(--btn-green-shadow);
   transition: all 0.3s ease;
 }
+.green-btn:hover {
+  border-bottom: 6px solid #d49b00;
+  border-left: 1px solid #d49b00;
+  border-right: 4px solid #d49b00;
+  border-top: 1px solid #d49b00;
+  background-color: #ffd027;
+}
 
 .google-button {
   padding: 24px 16px;
@@ -116,6 +123,13 @@
   background-color: var(--btn-pink);
   font-family: var(--second-family);
   color: var(--surface-white);
+}
+.google-button:hover {
+  border-bottom: 8px solid #c84212;
+  border-left: 1px solid #c84212;
+  border-right: 4px solid #c84212;
+  border-top: 1px solid #c84212;
+  background-color: #ff6b35;
 }
 .header-download-btn {
   display: none;

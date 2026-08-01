@@ -1,6 +1,7 @@
 .hero {
   padding-bottom: 96px;
   background-color: var(--bg-light);
+  transform: translateZ(0);
   background-image:
     linear-gradient(
       180deg,
@@ -24,8 +25,8 @@
     top center,
     top center;
   background-size:
-    375px 528px,
-    375px 100%,
+    375px 530px,
+    375px 530px,
     contain;
   max-width: 375px;
   width: 100%;
@@ -83,6 +84,7 @@
   position: relative;
   width: 375px;
   padding-top: 246px;
+  border: none;
 }
 
 .hero-picture {
