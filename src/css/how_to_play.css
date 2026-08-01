@@ -1,3 +1,6 @@
+.how-to-play {
+  padding: 96px 0;
+}
 .how-to-play-title {
   font-size: 40px;
   margin-bottom: 24px;
@@ -67,8 +70,6 @@
     flex-direction: column;
     align-items: start;
     position: relative;
-    padding-top: 96px;
-    padding-bottom: 96px;
   }
 
   .how-to-play-item {
