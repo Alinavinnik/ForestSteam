@@ -59,6 +59,7 @@
   .how-to-play-container {
     display: flex;
     flex-direction: column;
+    align-items: start;
     position: relative;
     padding-top: 96px;
     padding-bottom: 96px;
@@ -66,9 +67,8 @@
 
   .how-to-play-item {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+
+    justify-content: start;
     gap: 24px;
   }
 
@@ -109,7 +109,80 @@
     width: 100%;
     margin: 0;
     position: absolute;
-    top: 177px;
+    top: 193px;
     left: 728px;
+  }
+  .active-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    display: none;
+  }
+
+  .active-1[data-slide='1'][data-active-slide='1'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/heart_1_desk.webp'),
+      url('../img/desc/how_to_play/book_1_desk.webp');
+    background-size:
+      64px 57px,
+      87px 97px;
+    background-position:
+      577px 167px,
+      1162px 555px;
+  }
+
+  .active-1[data-slide='2'][data-active-slide='2'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/blast_2_desk.webp'),
+      url('../img/desc/how_to_play/propeller_2_desk.webp');
+    background-size:
+      110px 134px,
+      72px 66px;
+    background-position:
+      537px 752px,
+      1162px 172px;
+  }
+  .active-1[data-slide='3'][data-active-slide='3'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/blast_2_desk.webp'),
+      url('../img/desc/how_to_play/propeller_2_desk.webp');
+    background-size:
+      110px 134px,
+      72px 66px;
+    background-position:
+      1180px 128px,
+      580px 430px;
+  }
+  .active-1[data-slide='4'][data-active-slide='4'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/chamomile_4_desk.webp'),
+      url('../img/desc/how_to_play/clover_4_desk.webp');
+    background-size:
+      110px 112px,
+      115px 115px;
+    background-position:
+      550px 530px,
+      1140px 703px;
+  }
+
+  .active-1[data-slide='5'][data-active-slide='5'] {
+    display: block;
+    background-image:
+      url('../img/desc/how_to_play/big_heart_5_desk.webp'),
+      url('../img/desc/how_to_play/funnel_5_desk.webp');
+    background-size:
+      130px 112px,
+      120px 115px;
+    background-position:
+      1180px 745px,
+      530px 430px;
   }
 }
