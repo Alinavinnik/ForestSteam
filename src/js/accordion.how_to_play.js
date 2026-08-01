@@ -22,6 +22,10 @@ export default function () {
       decors.forEach(decor => {
         decor.dataset.activeSlide = slideNumber;
       });
+
+      if (window.innerWidth < 1440) {
+        title.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 }
