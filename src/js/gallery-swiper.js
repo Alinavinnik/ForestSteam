@@ -16,7 +16,7 @@ new Swiper('[data-gallery-swiper]', {
 
   breakpoints: {
     1440: {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: 16,
     },
   },

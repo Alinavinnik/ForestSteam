@@ -4,9 +4,25 @@
 }
 
 .gallery-list {
-  display: flex;
   margin-bottom: 16px;
 }
 .gallery-img {
   border-radius: 24px;
+  max-width: 164px;
+  width: 100%;
+  min-height: 300px;
+}
+@media screen and (min-width: 1440px) {
+  .gallery-title {
+    margin-bottom: 48px;
+    font-size: 48px;
+  }
+  .gallery-list {
+    margin-bottom: 24px;
+  }
+  .gallery-img {
+    border-radius: 24px;
+    max-width: 324px;
+    min-height: 592px;
+  }
 }
