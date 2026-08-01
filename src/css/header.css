@@ -151,6 +151,7 @@
     max-width: 1040px;
     width: 100%;
   }
+
   .header-nav-list {
     display: flex;
     justify-content: space-between;
@@ -159,6 +160,11 @@
   }
   .header-nav-item:last-child {
     padding: 24px 0;
+  }
+  .header-download-btn[data-visible='show'] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .burger {
