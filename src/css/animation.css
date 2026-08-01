@@ -50,3 +50,32 @@
     transform: rotate(8deg);
   }
 }
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  20% {
+    transform: rotate(-4deg) translateX(-2px);
+  }
+  40% {
+    transform: rotate(4deg) translateX(2px);
+  }
+  60% {
+    transform: rotate(-3deg) translateX(-1px);
+  }
+  80% {
+    transform: rotate(3deg) translateX(1px);
+  }
+}
+
+@keyframes bounce-clover {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
