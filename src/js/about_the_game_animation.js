@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // анімація тільки один раз
+        } else {
+          entry.target.classList.remove('is-visible');
         }
       });
     },
     {
-      threshold: 0.2, // спрацьовує, коли 20% секції видно
+      threshold: 0.2,
     }
   );
 
