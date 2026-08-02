@@ -4,6 +4,7 @@ import './js/reviews';
 import './js/faq';
 import showGoogleBtn from './js/header.js';
 import './js/gallery-swiper.js';
+import './js/about_the_game_animation';
 modalWindow();
 accordionHowToPlay();
 showGoogleBtn();
