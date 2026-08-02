@@ -17,11 +17,10 @@ export default function () {
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        } else {
-          entry.target.classList.remove('is-visible');
-        }
+        entry.target.setAttribute(
+          'data-reviews-visible',
+          entry.isIntersecting ? 'true' : 'false'
+        );
       });
     },
     { threshold: 0.2 }
@@ -54,10 +53,10 @@ export default function () {
 
     on: {
       slideChangeTransitionStart(swiper) {
-        swiper.el.classList.add('is-transitioning');
+        swiper.el.setAttribute('data-reviews-transitioning', 'true');
       },
       slideChangeTransitionEnd(swiper) {
-        swiper.el.classList.remove('is-transitioning');
+        swiper.el.setAttribute('data-reviews-transitioning', 'false');
       },
     },
   });

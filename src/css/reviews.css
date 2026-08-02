@@ -109,13 +109,13 @@
     transform 0.6s ease-out;
 }
 
-.reviews.is-visible .reviews-header-text {
+[data-reviews][data-reviews-visible='true'] .reviews-header-text {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.1s;
 }
 
-.reviews.is-visible .reviews-title {
+[data-reviews][data-reviews-visible='true'] .reviews-title {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.25s;
@@ -129,29 +129,31 @@
     transform 0.55s ease-out;
 }
 
-.reviews.is-visible .reviews-card {
+[data-reviews][data-reviews-visible='true'] .reviews-card {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Стагер по картках — незалежно від того, скільки їх видно на екрані */
-.reviews.is-visible .reviews-card:nth-child(1) {
+[data-reviews][data-reviews-visible='true'] .reviews-card:nth-child(1) {
   transition-delay: 0.35s;
 }
-.reviews.is-visible .reviews-card:nth-child(2) {
+[data-reviews][data-reviews-visible='true'] .reviews-card:nth-child(2) {
   transition-delay: 0.45s;
 }
-.reviews.is-visible .reviews-card:nth-child(3) {
+[data-reviews][data-reviews-visible='true'] .reviews-card:nth-child(3) {
   transition-delay: 0.55s;
 }
-.reviews.is-visible .reviews-card:nth-child(4) {
+[data-reviews][data-reviews-visible='true'] .reviews-card:nth-child(4) {
   transition-delay: 0.65s;
 }
-.reviews.is-visible .reviews-card:nth-child(5) {
+[data-reviews][data-reviews-visible='true'] .reviews-card:nth-child(5) {
   transition-delay: 0.75s;
 }
 
-.reviews.is-visible .reviews-container .reviews-controls {
+[data-reviews][data-reviews-visible='true']
+  .reviews-container
+  .reviews-controls {
   opacity: 1;
   transform: translateY(0);
 }
@@ -168,7 +170,7 @@
 .reviews-list {
   transition: opacity 0.25s ease;
 }
-.reviews-slider.is-transitioning .reviews-list {
+.reviews-slider[data-reviews-transitioning='true'] .reviews-list {
   opacity: 0.5;
 }
 

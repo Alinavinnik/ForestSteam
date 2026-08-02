@@ -6,11 +6,10 @@ export default function () {
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        } else {
-          entry.target.classList.remove('is-visible');
-        }
+        entry.target.setAttribute(
+          'data-faq-visible',
+          entry.isIntersecting ? 'true' : 'false'
+        );
       });
     },
     { threshold: 0.15 }
@@ -27,7 +26,7 @@ export default function () {
     // Якщо елемент відкритий одразу при завантаженні (data-item open),
     // текст відповіді має бути одразу видимим
     if (item.open) {
-      answer.classList.add('is-text-visible');
+      answer.setAttribute('data-answer-visible', 'true');
     }
 
     summary.addEventListener('click', e => {
@@ -56,7 +55,7 @@ export default function () {
         answer.style.height = endHeight + 'px';
         // Текст з'являється трохи згодом, коли контейнер уже відкривається
         setTimeout(() => {
-          answer.classList.add('is-text-visible');
+          answer.setAttribute('data-answer-visible', 'true');
         }, 80);
       });
 
@@ -73,7 +72,7 @@ export default function () {
       isAnimating = true;
       const startHeight = answer.scrollHeight;
 
-      answer.classList.remove('is-text-visible');
+      answer.setAttribute('data-answer-visible', 'false');
 
       answer.style.overflow = 'hidden';
       answer.style.height = startHeight + 'px';

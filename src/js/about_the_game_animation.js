@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   const aboutSection = document.querySelector('[data-about]');
 
+  if (!aboutSection) return;
+
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        } else {
-          entry.target.classList.remove('is-visible');
-        }
+        entry.target.setAttribute(
+          'data-visible',
+          entry.isIntersecting ? 'true' : 'false'
+        );
       });
     },
     {
@@ -16,7 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   );
 
-  if (aboutSection) {
-    observer.observe(aboutSection);
-  }
+  observer.observe(aboutSection);
 });

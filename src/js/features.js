@@ -16,7 +16,7 @@ export default function () {
     if (prefersReducedMotion || window.innerWidth < DESKTOP_BREAKPOINT) return;
 
     character.getAnimations().forEach(anim => anim.cancel());
-    items.forEach(item => item.classList.remove('features-item--dip'));
+    items.forEach(item => item.setAttribute('data-features-dip', 'false'));
 
     const containerRect = container.getBoundingClientRect();
     const charWidth = character.offsetWidth;
@@ -102,8 +102,8 @@ export default function () {
 
     dipSchedule.forEach(({ item, time }) => {
       setTimeout(() => {
-        item.classList.add('features-item--dip');
-        setTimeout(() => item.classList.remove('features-item--dip'), 260);
+        item.setAttribute('data-features-dip', 'true');
+        setTimeout(() => item.setAttribute('data-features-dip', 'false'), 260);
       }, time);
     });
 

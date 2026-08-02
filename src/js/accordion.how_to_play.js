@@ -31,20 +31,19 @@ export default function () {
   });
 
   // Повторювана вхідна анімація секції при кожній появі у viewport
-  if (howToPlaySection) {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          } else {
-            entry.target.classList.remove('is-visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
+  if (!howToPlaySection) return;
 
-    observer.observe(howToPlaySection);
-  }
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        entry.target.setAttribute(
+          'data-visible',
+          entry.isIntersecting ? 'true' : 'false'
+        );
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  observer.observe(howToPlaySection);
 }

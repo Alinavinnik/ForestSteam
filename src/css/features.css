@@ -73,7 +73,6 @@
     background-image 0.3s ease;
 }
 
-/* Кожен модифікатор задає лише свою картинку */
 .features-icon-book {
   --icon-img: url('/img/desc/features/book_desk.webp');
 }
@@ -164,7 +163,7 @@
 
 /* #region animation */
 .features-character {
-  display: none; /* за замовчуванням прихований */
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -188,7 +187,7 @@
     transform 0.25s ease-out;
 }
 
-.features-item--dip {
+.features-item[data-features-dip='true'] {
   transform: translateY(10px);
 }
 
@@ -205,7 +204,7 @@
   .features-character {
     display: none;
   }
-  .features-item--dip {
+  .features-item[data-features-dip='true'] {
     transform: none;
   }
 }
