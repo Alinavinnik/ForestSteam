@@ -151,11 +151,11 @@
   transition-delay: 0.75s;
 }
 
-.reviews.is-visible .reviews-controls {
+.reviews.is-visible .reviews-container .reviews-controls {
   opacity: 1;
   transform: translateY(0);
 }
-.reviews-controls {
+.reviews-container .reviews-controls {
   opacity: 0;
   transform: translateY(20px);
   transition:
