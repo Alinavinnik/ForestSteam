@@ -64,6 +64,61 @@
 .how-to-play-img[data-hidden='false'] {
   display: block;
 }
+
+/* ===== АНІМАЦІЯ ПОЯВИ СЕКЦІЇ (спрацьовує кожного разу у viewport) ===== */
+
+.how-to-play-item .text-wrap {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.how-to-play.is-visible .how-to-play-item .text-wrap {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.how-to-play-item:nth-child(1) .text-wrap {
+  transition-delay: 0.05s;
+}
+.how-to-play-item:nth-child(2) .text-wrap {
+  transition-delay: 0.15s;
+}
+.how-to-play-item:nth-child(3) .text-wrap {
+  transition-delay: 0.25s;
+}
+.how-to-play-item:nth-child(4) .text-wrap {
+  transition-delay: 0.35s;
+}
+.how-to-play-item:nth-child(5) .text-wrap {
+  transition-delay: 0.45s;
+}
+
+.how-to-play-img[data-hidden='false'] {
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  transition-delay: 0.2s;
+}
+
+.how-to-play.is-visible .how-to-play-img[data-hidden='false'] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how-to-play-item .text-wrap,
+  .how-to-play-img[data-hidden='false'] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .how-to-play-container {
     display: flex;
@@ -115,6 +170,23 @@
     position: absolute;
     top: 193px;
     left: 728px;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  /* Плавний crossfade замість жорсткого display:none/block */
+  .how-to-play-img[data-hidden='true'] {
+    display: block;
+    opacity: 0;
+    transform: scale(0.96);
+    pointer-events: none;
+    position: absolute;
+  }
+  .how-to-play-img[data-hidden='false'] {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
   }
 
   .active-1 {
@@ -142,7 +214,9 @@
     background-image: url('../img/desc/how_to_play/heart_1_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: heartbeat 1.2s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      heartbeat 1.2s ease-in-out infinite;
   }
 
   .active-1[data-slide='1'][data-active-slide='1']::after {
@@ -156,7 +230,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     transform-origin: top left;
-    animation: swing 2.5s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      swing 2.5s ease-in-out infinite;
   }
 
   .active-1[data-slide='2'][data-active-slide='2'] {
@@ -173,7 +249,9 @@
     background-image: url('../img/desc/how_to_play/blast_2_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: shake 0.6s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      shake 0.6s ease-in-out infinite;
   }
 
   .active-1[data-slide='2'][data-active-slide='2']::after {
@@ -186,7 +264,9 @@
     background-image: url('../img/desc/how_to_play/propeller_2_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: spin 6s linear infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      spin 6s linear infinite;
   }
 
   .active-1[data-slide='3'][data-active-slide='3'] {
@@ -203,7 +283,9 @@
     background-image: url('../img/desc/how_to_play/blast_2_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: shake 0.6s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      shake 0.6s ease-in-out infinite;
   }
 
   .active-1[data-slide='3'][data-active-slide='3']::after {
@@ -216,7 +298,9 @@
     background-image: url('../img/desc/how_to_play/propeller_2_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: spin 6s linear infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      spin 6s linear infinite;
   }
 
   .active-1[data-slide='4'][data-active-slide='4'] {
@@ -233,7 +317,9 @@
     background-image: url('../img/desc/how_to_play/chamomile_4_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: spin 6s linear infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      spin 6s linear infinite;
   }
 
   .active-1[data-slide='4'][data-active-slide='4']::after {
@@ -246,7 +332,9 @@
     background-image: url('../img/desc/how_to_play/clover_4_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: bounce-clover 1.6s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      bounce-clover 1.6s ease-in-out infinite;
   }
 
   .active-1[data-slide='5'][data-active-slide='5'] {
@@ -263,7 +351,9 @@
     background-image: url('../img/desc/how_to_play/big_heart_5_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: heartbeat 1.2s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      heartbeat 1.2s ease-in-out infinite;
   }
 
   .active-1[data-slide='5'][data-active-slide='5']::after {
@@ -276,6 +366,23 @@
     background-image: url('../img/desc/how_to_play/funnel_5_desk.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    animation: pour 2.5s ease-in-out infinite;
+    animation:
+      pop-in 0.4s ease-out,
+      pour 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
