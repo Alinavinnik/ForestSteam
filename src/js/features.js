@@ -1,8 +1,8 @@
 export default function () {
-  const section = document.querySelector('.features');
-  const container = document.querySelector('.features-container');
-  const character = document.querySelector('.features-character');
-  const items = document.querySelectorAll('.features-item');
+  const section = document.querySelector('[data-features]');
+  const container = document.querySelector('[data-features-container]');
+  const character = document.querySelector('[data-features-character]');
+  const items = document.querySelectorAll('[data-features-item]');
 
   if (!section || !container || !character || !items.length) return;
 
