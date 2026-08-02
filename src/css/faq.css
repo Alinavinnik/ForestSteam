@@ -136,6 +136,136 @@
   z-index: 0;
 }
 
+/* #region animation */
+
+/* 1. Вхідна анімація секції — заголовок + стагер карток, повторюється у viewport */
+.faq-header-text,
+.faq-title {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.faq.is-visible .faq-header-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.faq.is-visible .faq-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+/* Стагер карток — окремий transition, що не заважає open/close переходу тіні */
+.faq-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease,
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.faq.is-visible .faq-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq.is-visible .faq-item:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.faq.is-visible .faq-item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.faq.is-visible .faq-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.faq.is-visible .faq-item:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.faq.is-visible .faq-item:nth-child(5) {
+  transition-delay: 0.7s;
+}
+
+/* 2. Плавна поява тексту відповіді (керується JS-класом is-text-visible) */
+.faq-answer-text {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.faq-answer.is-text-visible .faq-answer-text {
+  opacity: 0.7; /* повертаємось до початкової прозорості з дизайну */
+}
+
+/* 3. Idle-анімація декоративних іконок — нескінченний, легкий рух */
+.faq-img-propeller {
+  animation: faq-spin 5s linear infinite;
+}
+
+.faq-img-blast {
+  transform-origin: center;
+  animation: faq-swing 2.4s ease-in-out infinite;
+}
+
+@keyframes faq-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes faq-swing {
+  0%,
+  100% {
+    transform: rotate(-21.5deg);
+  }
+  50% {
+    transform: rotate(-31.5deg);
+  }
+}
+
+/* 4. Натискний ефект на питанні — тільки transform, без дотику до тіні */
+.faq-question {
+  transform: scale(1);
+  transition: transform 120ms ease;
+}
+.faq-question:active {
+  transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-header-text,
+  .faq-title,
+  .faq-item {
+    opacity: 1;
+    transform: none;
+    transition:
+      background-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+  .faq-answer-text {
+    opacity: 0.7;
+    transition: none;
+  }
+  .faq-img-propeller,
+  .faq-img-blast {
+    animation: none;
+  }
+  .faq-question {
+    transition: none;
+  }
+  .faq-question:active {
+    transform: none;
+  }
+}
+/* #endregion animation */
+
 @media screen and (min-width: 1440px) {
   .faq {
     max-width: 1440px;
