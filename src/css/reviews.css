@@ -33,7 +33,6 @@
   padding: 24px;
   width: 100%;
   height: 100%;
-  /* box-shadow: 4px 6px 12px 0 rgba(162, 224, 184, 0.24); */
   background-image: url('../img/mob/reviews/frame_mob.svg');
   background-size: 97%;
   background-position: center;
@@ -83,7 +82,6 @@
   border-left: 1px solid #c71f52;
   border-right: 2px solid #c71f52;
   border-top: 1px solid #c71f52;
-  /* box-shadow: 4px 8px 16px 0 rgba(199, 31, 82, 0.24); */
   transition:
     background-color 0.2s ease,
     border-left 0.2s ease,
@@ -98,6 +96,97 @@
 .reviews-slider {
   overflow: hidden;
 }
+
+/* ===== #region animation ===== */
+
+/* 1. Вхідна анімація секції — спрацьовує кожного разу у viewport */
+.reviews-header-text,
+.reviews-title {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.reviews.is-visible .reviews-header-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.reviews.is-visible .reviews-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+.reviews-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.55s ease-out,
+    transform 0.55s ease-out;
+}
+
+.reviews.is-visible .reviews-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стагер по картках — незалежно від того, скільки їх видно на екрані */
+.reviews.is-visible .reviews-card:nth-child(1) {
+  transition-delay: 0.35s;
+}
+.reviews.is-visible .reviews-card:nth-child(2) {
+  transition-delay: 0.45s;
+}
+.reviews.is-visible .reviews-card:nth-child(3) {
+  transition-delay: 0.55s;
+}
+.reviews.is-visible .reviews-card:nth-child(4) {
+  transition-delay: 0.65s;
+}
+.reviews.is-visible .reviews-card:nth-child(5) {
+  transition-delay: 0.75s;
+}
+
+.reviews.is-visible .reviews-controls {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reviews-controls {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+  transition-delay: 0.85s;
+}
+
+/* 2. Плавний кросфейд поверх стандартного слайду Swiper при перемиканні */
+.reviews-list {
+  transition: opacity 0.25s ease;
+}
+.reviews-slider.is-transitioning .reviews-list {
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-header-text,
+  .reviews-title,
+  .reviews-card,
+  .reviews-controls {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reviews-list {
+    transition: none;
+    opacity: 1 !important;
+  }
+}
+/* ===== #endregion animation ===== */
 
 @media screen and (min-width: 1440px) {
   .reviews {
