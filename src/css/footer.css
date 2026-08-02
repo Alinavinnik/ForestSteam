@@ -4,6 +4,7 @@
   padding-bottom: 16px;
 }
 .footer__logo {
+  font-family: var(--second-family);
   font-weight: 700;
   font-size: 32px;
   color: var(--text-stroke);
