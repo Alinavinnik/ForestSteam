@@ -254,3 +254,80 @@
     background-image: url('../img/desc/hero/chamomile_desc.webp');
   }
 }
+
+/* #region animation texts */
+.hero-title,
+.hero-description,
+.hero-subtitle,
+.hero-link {
+  opacity: 0;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.hero-title {
+  animation-name: slide-in-left;
+  animation-delay: 0.1s;
+}
+
+.hero-description {
+  animation-name: slide-in-right;
+  animation-delay: 0.4s;
+}
+
+.hero-subtitle {
+  animation-name: slide-in-left;
+  animation-delay: 0.7s;
+}
+
+.hero-link {
+  animation-name: slide-in-bottom;
+  animation-delay: 1s;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Пошана до людей, які вимкнули анімації в системі */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-description,
+  .hero-subtitle,
+  .hero-link {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+/* #endregion animation texts */
