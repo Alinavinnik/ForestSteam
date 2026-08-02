@@ -161,3 +161,52 @@
     font-size: 24px;
   }
 }
+
+/* #region animation */
+.features-character {
+  display: none; /* за замовчуванням прихований */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 150px;
+  background-image: url('../img/desc/features/runing_funnel.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 5;
+  will-change: transform;
+}
+
+.features-item {
+  transition:
+    border-color 0.3s ease,
+    height 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.25s ease-out;
+}
+
+.features-item--dip {
+  transform: translateY(10px);
+}
+
+@media screen and (min-width: 1440px) {
+  .features-container {
+    position: relative;
+  }
+  .features-character {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .features-character {
+    display: none;
+  }
+  .features-item--dip {
+    transform: none;
+  }
+}
+/* #endregion animation */
