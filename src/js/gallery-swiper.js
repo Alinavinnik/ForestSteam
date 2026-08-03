@@ -11,7 +11,7 @@ new Swiper('[data-gallery-swiper]', {
   navigation: {
     nextEl: '[data-gallery-next]',
     prevEl: '[data-gallery-prev]',
-    disabledClass: 'reviews-btn-disabled',
+    disabledClass: 'swiper-reviews-btn-disabled',
   },
 
   breakpoints: {

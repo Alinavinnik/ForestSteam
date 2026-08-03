@@ -87,7 +87,8 @@
     border-left 0.2s ease,
     border-top 0.2s ease;
 }
-.reviews-btn-disabled {
+
+.swiper-reviews-btn-disabled {
   background-color: #ffb8c6;
   border: none;
   box-shadow: none;
@@ -230,8 +231,8 @@
   .reviews-controls {
     gap: 12px;
   }
-  .reviews-btn:not(.reviews-btn-disabled):hover,
-  .reviews-btn:not(.reviews-btn-disabled):focus-visible {
+  .reviews-btn:not(.swiper-reviews-btn-disabled):hover,
+  .reviews-btn:not(.swiper-reviews-btn-disabled):focus-visible {
     background-color: var(--btn-pink-pressed);
     border-right: 4px solid #c71f52;
     border-bottom: 8px solid #c71f52;

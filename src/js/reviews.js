@@ -41,7 +41,7 @@ export default function () {
     navigation: {
       nextEl: '[data-next]',
       prevEl: '[data-prev]',
-      disabledClass: 'reviews-btn-disabled',
+      disabledClass: 'swiper-reviews-btn-disabled',
     },
 
     breakpoints: {
